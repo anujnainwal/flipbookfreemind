@@ -1,0 +1,342 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>FreeMind Flipbook </title>
+    <meta name="viewport" content="width = device-width, minimum-scale=1, maximum-scale=1, user-scalable = no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- External JS dependencies -->
+    <script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/underscore-min.js"></script>
+    <script type="text/javascript" src="assets/js/backbone-min.js"></script>
+    
+    <!-- Turn.js UI Kit -->
+    <script type="text/javascript" src="assets/js/turn.min.js"></script>
+    
+    <!-- App dependencies -->
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+
+     <!-- External CSS dependencies -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png?a" />
+    <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+
+    <!-- App CSS dependencies -->
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css"></link>
+
+    <style type="text/css">
+      .page-1 .s1{
+        -webkit-transform: translateY(100px);
+        -webkit-transition: all 1.5s;
+        opacity: 0;
+      }
+      .page-1 .s2{
+        -webkit-transform: translateY(100px);
+        -webkit-transition: all 1s;
+        -webkit-transition-delay: 0.5s;
+        opacity: 0;
+        font-family: 'Carrois Gothic SC', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        text-align: center;
+        color: white;
+      }
+    
+      .page-1.animation-on .s1{
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+      }
+      .page-1.animation-on .s2{
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+      }
+
+    </style>
+  </head>
+<body>
+    <audio style="display: none;" id="audioTag" src="https://f-150.s3.amazonaws.com/sounds/1.mp3" autoplay="autoplay"></audio>
+    
+  <div class="catalog-app">
+        
+      
+    <div style="text-align: center">  <div class="ui-slider" id="page-slider">
+        
+      </div></div>
+   
+  
+      <div id="viewer">
+    <div id="flipbook" class="ui-flipbook">
+      
+      <div>
+
+       <img src="./assets/img/A-1.png" class="flipImages"/>
+      </div>
+        
+      <div>
+
+       <img src="./assets/img/A-2.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-3.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-4.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-5.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-6.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-7.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-8.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-9.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-10.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-11.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-12.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-13.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-14.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-15.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-16.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-17.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-18.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-19.png" class="flipImages"/>
+      </div>
+        <div>
+
+       <img src="./assets/img/A-20.png" class="flipImages"/>
+      </div>
+         <div>
+
+       <img src="./assets/img/A-21.png" class="flipImages"/>
+      </div>
+         <div>
+
+       <img src="./assets/img/A-22.png" class="flipImages"/>
+      </div>
+         <div>
+
+       <img src="./assets/img/A-23.png" class="flipImages"/>
+      </div>
+         <div>
+
+       <img src="./assets/img/A-24.png" class="flipImages"/>
+      </div>
+       
+        
+    
+        <a ignore="1" class="ui-arrow-control ui-arrow-next-page"></a>
+      <a ignore="1" class="ui-arrow-control ui-arrow-previous-page"></a>
+    </div>
+  </div>
+
+
+  <!-- controls -->
+  
+  <!-- / controls -->
+
+  <!-- miniatures -->
+  <div id="miniatures" class="ui-miniatures-slider">
+    
+  </div>
+  <!-- / miniatures -->
+<div id="controls">
+    <div class="all">
+        
+
+      <div class="ui-options" id="options" >
+          
+        
+            <a class="ui-icon show-hint" href="" style="width: 80px;">
+                <span style="float: left"><span id="pageNum">0</span> / 24</span>
+        </a>
+          
+          
+          
+       <a  title="Download" class="ui-icon show-hint" href="./assets/pdf/Catalogue2018.pdf" target="_blank">
+          <i class="fa fa-download"></i>
+        </a>
+          
+          <a id="vol" class="ui-icon show-hint"  >
+         <i  id="volume" class="fa fa-volume-up"></i>
+              
+          </a>
+          
+          <a class="ui-icon show-hint" title="List View" id="ui-icon-table-contents">
+          <i class="fa fa-bars"></i>
+        </a> 
+        
+        
+          
+       
+        
+        
+        
+          
+        <a class="ui-icon show-hint" title="Miniatures" id="ui-icon-miniature">
+          <i class="fa fa-th"></i>
+        </a>
+        <a class="ui-icon" id="ui-icon-zoom">
+          <i class="fa fa-search-plus"></i>
+        </a>
+        <a class="ui-icon show-hint" title="Share" id="ui-icon-share">
+          <i class="fa fa-share"></i>
+        </a>
+        <a class="ui-icon show-hint" title="Full Screen" id="ui-icon-full-screen">
+          <i class="fa fa-expand"></i>
+        </a>
+        <a class="ui-icon show-hint" id="ui-icon-toggle">
+          <i class="fa fa-ellipsis-v"></i>
+        </a>
+          
+      </div>
+
+      <!-- zoom slider -->
+      <div id="zoom-slider-view" class="zoom-slider">
+          <div class="bg">
+             <div class="ui-slider" id="zoom-slider">
+              <div class="bar">
+                <div class="progress-width">
+                  <div class="progress">
+                    <div class="handler"></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / zoom slider -->
+    </div>
+    
+    <div id="ui-icon-expand-options">
+      <a class="ui-icon show-hint">
+        <i class="fa fa-ellipsis-h"></i>
+      </a>
+    </div>
+      
+      
+      
+
+  </div>
+
+
+
+
+<script type="text/javascript">
+  // Change these settings
+
+  FlipbookSettings = {
+    options: {
+        
+      width: 1300,
+      height: 1000,
+      autoCenter: true
+       
+    },
+
+    shareMessage: 'Introducing turn.js 5 - HTML5 Library for Flipbooks.',
+
+    table: [
+      {text: 'Cover', page: 1},
+      {text: 'My Note Book', page: 2},
+      {text: 'My Long Book', page: 4},
+      {text: 'My Long Book', page: 6},
+      {text: 'My Practical Book', page: 8},
+      {text: 'My Long Book', page: 10},
+       {text: 'My Art Book', page: 12},
+       {text: 'My Graph Book', page: 14},
+       {text: 'My Scrap Book', page: 16},
+       {text: 'My Craft Book', page: 18},
+       {text: 'My Spiral Book', page: 20},
+       {text: 'My 5-Subject Book', page: 22},
+       {text: 'The End', page: 24},
+        
+    ],
+
+    pageFolder: 'content/catalog/'
+  };
+
+  $(window).load(function(event) {
+    $("#flipbook .page-1").addClass('animation-on');
+  });
+  </script>
+  <script>
+$('#volume').click(function(){
+   
+	
+    if( $("#audioTag").prop('muted') ) {
+        
+		
+		$("#volume").removeClass("fa fa-volume-off");
+          $("#audioTag").prop('muted', false);
+		    $("#vol").prop('title', "Mute");
+		   $("#volume").addClass("fa fa-volume-up");
+		   $("#volume").attr('title', "Mute");
+	
+		  
+         
+		  
+      
+    } else {
+	
+      $("#audioTag").prop('muted', true);
+        $("#vol").prop('title', "Unmute");
+	   $("#volume").removeClass("fa fa-volume-up");
+      $("#volume").addClass("fa fa-volume-off");
+	  
+	//  
+    }
+});
+      
+     
+      
+
+    
+   </script>
+  </body>
+</html>
