@@ -524,7 +524,7 @@
 
     _refreshPictureEvent: function (event, pageNumber, $pageElement) {
       var settings = window.FlipbookSettings,
-        imgSrc = "/assets/img/A-" + pageNumber + ".png",
+        imgSrc = "./assets/img/A-" + pageNumber + ".png",
         $img = $pageElement.find("img");
 
       if (!$img[0]) {
